@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon ./src/index.ts"
   },
   "keywords": [],
   "author": "",
@@ -17,10 +17,12 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
+    "@types/nodemon": "^1.19.6",
     "axios": "^1.7.9",
     "body-parser": "^1.20.3",
     "chalk": "^5.4.1",
     "express": "^4.21.2",
-    "inquirer": "^12.4.1"
+    "inquirer": "^12.4.1",
+    "nodemon": "^3.1.9"
   }
 }
