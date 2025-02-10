@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API_URL = 'https://api.coingecko.com/api/v3/simple/price';
 
-type CryptoSymbols = 'bitcoin' | 'ethereum' | 'tether' | 'binancecoin' | 'solana';
+type CryptoSymbols = 'bitcoin' | 'ethereum' | 'tether' | 'binancecoin' | 'solana' | 'cardano' | 'polkadot' | 'ripple' | 'dogecoin' | 'litecoin' | 'chainlink';
 type FiatCurrencies = 'ngn' | 'zar' | 'kes' | 'ghs' | 'egp' | 'mad';
 
 interface CryptoRates {
@@ -29,5 +29,5 @@ export const getAvailableCurrencies = (): FiatCurrencies[] => {
 };
 
 export const getAvailableCryptos = (): CryptoSymbols[] => {
-    return ['bitcoin', 'ethereum', 'tether', 'binancecoin', 'solana'];
+    return ['bitcoin', 'ethereum', 'tether', 'binancecoin', 'solana', 'cardano','polkadot','ripple','dogecoin','litecoin','chainlink'];
 };
