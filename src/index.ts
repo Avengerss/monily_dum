@@ -5,9 +5,14 @@ import routes from './routes';
 
 const app = express();
 const port = 3000;
-
+const coresOption = {
+    origin: [
+        "http://localhost:3000",
+      ],
+    credentials: true,
+};
 // Enable CORS for all origins
-app.use(cors());
+app.use(cors(coresOption));
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
