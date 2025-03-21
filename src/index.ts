@@ -5,15 +5,14 @@ import routes from './routes';
 
 const app = express();
 const port = 3000;
-const coresOption = {
-    origin: [
-        "*",
-        "http://localhost:3000/",
-      ],
+const corsOptions = {
+    origin: "*", // Allow all origins
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
+    allowedHeaders: "Origin, X-Requested-With, Content-Type, Accept, Authorization"
 };
 // Enable CORS for all origins
-app.use(cors(coresOption));
+app.use(cors(corsOptions));
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
