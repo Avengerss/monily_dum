@@ -7,7 +7,8 @@ const app = express();
 const port = 3000;
 const coresOption = {
     origin: [
-        "http://localhost:3000",
+        "*",
+        "http://localhost:3000/",
       ],
     credentials: true,
 };
