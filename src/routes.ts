@@ -12,6 +12,6 @@ router.post('/convert/crypto-to-fiat', convertFromCryptoToFiat);
 router.get('/currencies', getCurrencies);
 router.get('/cryptos', getCryptos);
 
-router.get('/crypto-prices', getCryptoPrices);
+router.post('/crypto-prices', getCryptoPrices);
 
 export default router;
