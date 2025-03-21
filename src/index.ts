@@ -1,9 +1,13 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import cors from 'cors';
 import routes from './routes';
 
 const app = express();
 const port = 3000;
+
+// Enable CORS for all origins
+app.use(cors());
 
 // Middleware to parse JSON bodies
 app.use(bodyParser.json());
