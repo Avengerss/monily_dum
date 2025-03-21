@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { convertFromFiatToCrypto, convertFromCryptoToFiat } from './controllers/conversionController';
-import { getCurrencies, getCryptos } from './controllers/currencyController';
+import { getCurrencies, getCryptos, getCryptoPrices } from './controllers/currencyController';
 
 const router = Router();
 
@@ -11,5 +11,7 @@ router.post('/convert/crypto-to-fiat', convertFromCryptoToFiat);
 // Get Available Currencies and Cryptos
 router.get('/currencies', getCurrencies);
 router.get('/cryptos', getCryptos);
+
+router.get('/crypto-prices', getCryptoPrices);
 
 export default router;
